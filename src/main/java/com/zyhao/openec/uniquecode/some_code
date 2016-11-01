@@ -1,0 +1,43 @@
+/**
+	 * 大订单号生成时品牌与代表数字映射
+	 */
+	public static final Map<String,String> BigOrderCodeBrandMap = new HashMap<String,String>(){
+		
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		{
+			put("ONLY","1");
+			put("JACKJONES","2");
+			put("VEROMODA","3");
+			put("SELECTED","4");
+			put("JLINDEBERG","5");
+		}
+	};
+	
+
+千雨 2016/10/31 11:58:55
+	
+	/**
+	 * 生成订单号中机器码映射
+	 */
+	public static final Map<String,String> GenerateMachineCodeMap = new HashMap<String,String>(){
+		
+		/**
+		 * 
+		 */
+		private static final long serialVersionUID = 1L;
+
+		{
+			//生产环境
+			put("10.171.52.240","1");
+			put("10.44.183.162","2");
+			put("10.44.146.227","3");
+			put("10.171.50.87","4");
+			//测试环境
+			put("10.171.94.166","1");
+			put("192.168.2.223","1");//本地IP
+		}
+	};
