@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Implementation-Title: openec/unique-code-server
+Implementation-Title: openec/unique-code-service
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: zgy_c
 Implementation-Vendor-Id: com.zyhao
