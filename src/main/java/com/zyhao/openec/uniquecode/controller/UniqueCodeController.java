@@ -34,4 +34,22 @@ public class UniqueCodeController {
     	
     }
 
+    @RequestMapping(value = "/uniqueCodePatch" ,method = RequestMethod.PATCH)
+    public ResponseEntity<SequenceTable> uniqueCodePatch() throws Exception {
+    	System.out.println("-------------patch----------------");
+    	return Optional.ofNullable(uniqueCodeService.uniqueCode())
+                .map(uniqueCode -> new ResponseEntity(uniqueCode,HttpStatus.OK))
+                .orElseThrow(() -> new Exception("Could not find unique code service"));
+    	
+    }
+   
+    @RequestMapping(value = "/uniqueCodePatch" ,method = RequestMethod.GET)
+    public ResponseEntity<SequenceTable> uniqueCodeGET() throws Exception {
+    	System.out.println("-------------GET----------------");
+    	return Optional.ofNullable(uniqueCodeService.uniqueCode())
+                .map(uniqueCode -> new ResponseEntity(uniqueCode,HttpStatus.OK))
+                .orElseThrow(() -> new Exception("Could not find unique code service"));
+    	
+    }
+    
 }

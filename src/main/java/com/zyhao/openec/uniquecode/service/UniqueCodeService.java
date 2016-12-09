@@ -25,13 +25,19 @@ public class UniqueCodeService {
     SequenceTableService sequenceTableService;
     
 	private String getRemoteIP(HttpServletRequest request) {
+		
+		String host=request.getRemoteHost();//返回发出请求的客户机的主机名
+		int port =request.getRemotePort();//返回发出请求的客户机的端口号。
+		
+		log.info("remotePort-------------->"+host+"-=-"+port);
+		
     	if(request.getHeader("x-forwarded-for") != null){
     		log.info("x-forwarded-for-------------->"+request.getHeader("x-forwarded-for"));
-    		return request.getHeader("x-forwarded-for");
+    		return request.getHeader("x-forwarded-for")+"_"+port;
     	}
     	
     	log.info("remoteAddr-------------->"+request.getRemoteAddr());
-    	return request.getRemoteAddr();
+    	return request.getRemoteAddr()+"_"+port;
 		
 	}
 	
