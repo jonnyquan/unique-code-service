@@ -1,0 +1,10 @@
+com\zyhao\openec\uniquecode\controller\UniqueCodeController.class
+com\zyhao\openec\uniquecode\entity\UniqueCode.class
+com\zyhao\openec\uniquecode\service\UniqueCodeService.class
+com\zyhao\openec\UniqueCodeApplication$CustomizedRestMvcConfiguration.class
+com\zyhao\openec\UniqueCodeApplication.class
+com\zyhao\openec\uniquecode\repository\SequenceTableRepository.class
+com\zyhao\openec\uniquecode\service\SequenceTableService.class
+com\zyhao\openec\uniquecode\controller\SequenceTableController.class
+com\zyhao\openec\uniquecode\entity\SequenceTable.class
+com\zyhao\openec\uniquecode\repository\UniqueCodeRepository.class
