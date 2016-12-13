@@ -20,7 +20,7 @@ import com.zyhao.openec.uniquecode.service.UniqueCodeService;
  *
  */
 @RestController
-@RequestMapping(path = "/v1")
+@RequestMapping(path = "/nologin")
 public class UniqueCodeController {
 	
     @Autowired  

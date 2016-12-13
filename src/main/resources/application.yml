@@ -12,6 +12,10 @@ spring:
   jpa:
     database-platform: org.hibernate.dialect.MySQLDialect
     show-sql: true
+  zipkin:
+    base-url: http://zipkin.openec.zyhao.com:9411/
+security:
+  ignored: /**
 eureka:
   instance:
     prefer-ip-address: true
@@ -47,7 +51,7 @@ eureka:
 ---
 spring:
   application:
-    name: account-service
+    name: unique-code-service
   profiles: test
   jpa:
     show_sql: false
