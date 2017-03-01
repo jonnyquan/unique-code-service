@@ -15,7 +15,7 @@ import com.zyhao.openec.uniquecode.entity.SequenceTable;
 import com.zyhao.openec.uniquecode.service.SequenceTableService;
 
 @RestController
-@RequestMapping(path = "/v1")
+@RequestMapping(path = "/nologin")
 public class SequenceTableController {
 	
     @Autowired  

@@ -5,7 +5,12 @@ spring:
 spring:
   profiles: development
   datasource:
-    url: jdbc:oracle:thin:@db.openec.zyhao.com:1521/orcl
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+#    url: jdbc:mysql:/.openec.zyhao.com:3306/employeedb
+#    username: root
+#    password: 3g2win.com
+#    initialize: true
+    url: jdbc:oracle:thin:@192.168.2.200:1521/orcl
     username: uniquecodedb
     password: 3g2win.com
     initialize: true

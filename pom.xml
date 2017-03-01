@@ -57,12 +57,10 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/oracle/ojdbc -->
         <dependency>
-            <groupId>ojdbc</groupId>
-            <artifactId>ojdbc</artifactId>
-            <version>14</version>
-            <type>pom</type>
+            <groupId>com.hynnet</groupId>
+            <artifactId>oracle-driver-ojdbc_g</artifactId>
+            <version>12.1.0.2</version>
         </dependency>
 
         <dependency>

@@ -22,14 +22,14 @@ public class SequenceTableService {
 			return null;
 		}
 		
-		sequence.setCurrentValue((long) 1 );
+		sequence.setZyCurrentValue((long) 1 );
 		
-		if(sequence.getIncrement() == null){
-			sequence.setIncrement((long) 1 );
+		if(sequence.getZyIncrement() == null){
+			sequence.setZyIncrement((long) 1 );
 		}
 		
 		//查找已经存在的序列
-		SequenceTable seq = sequenceTableRepository.findOne(sequence.getName());
+		SequenceTable seq = sequenceTableRepository.findOne(sequence.getZyName());
 		
 		//创建新序列
 		if(seq == null){
@@ -53,7 +53,7 @@ public class SequenceTableService {
 		if(seq == null){
 			return null;
 		}
-		return seq.getCurrentValue();
+		return seq.getZyCurrentValue();
 	}
 	
 	/**
@@ -69,14 +69,14 @@ public class SequenceTableService {
 			return null;
 		}
 		
-		Long currentValue = seq.getCurrentValue();
-		Long increment = seq.getIncrement();
+		Long currentValue = seq.getZyCurrentValue();
+		Long increment = seq.getZyIncrement();
 		
-		seq.setCurrentValue(currentValue+increment);
+		seq.setZyCurrentValue(currentValue+increment);
 		
 		SequenceTable seq2 = sequenceTableRepository.save(seq);
 		
-		return seq2.getCurrentValue();
+		return seq2.getZyCurrentValue();
 	}
 	
 	/**
@@ -93,7 +93,7 @@ public class SequenceTableService {
 			return null;
 		}
 		
-		seq.setCurrentValue(currentValue);
+		seq.setZyCurrentValue(currentValue);
 		
 		return sequenceTableRepository.save(seq);
 	}
@@ -112,7 +112,7 @@ public class SequenceTableService {
 			return null;
 		}
 		
-		seq.setIncrement(increment);
+		seq.setZyIncrement(increment);
 		
 		return sequenceTableRepository.save(seq);
 	}
