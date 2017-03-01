@@ -11,7 +11,7 @@ public class SequenceTableService {
 
 	@Autowired
 	SequenceTableRepository sequenceTableRepository;
-	
+
 	/**
 	 * 创建序列
 	 * @param sequence
@@ -21,24 +21,24 @@ public class SequenceTableService {
 		if(sequence == null){
 			return null;
 		}
-		
-		sequence.setCurrentValue((long) 1 );
-		
-		if(sequence.getIncrement() == null){
-			sequence.setIncrement((long) 1 );
+
+		sequence.setZyCurrentValue((long) 1 );
+
+		if(sequence.getZyIncrement() == null){
+			sequence.setZyIncrement((long) 1 );
 		}
-		
+
 		//查找已经存在的序列
-		SequenceTable seq = sequenceTableRepository.findOne(sequence.getName());
-		
+		SequenceTable seq = sequenceTableRepository.findOne(sequence.getZyName());
+
 		//创建新序列
 		if(seq == null){
 			return sequenceTableRepository.save(sequence);
 		}
-		
+
 		//返回已经存在的序列
 		return seq;
-		
+
 	}
 
 	/**
@@ -49,13 +49,13 @@ public class SequenceTableService {
 	public Long getCurrentValue(String name) {
 		//查找已经存在的序列
 		SequenceTable seq = sequenceTableRepository.findOne(name);
-		
+
 		if(seq == null){
 			return null;
 		}
-		return seq.getCurrentValue();
+		return seq.getZyCurrentValue();
 	}
-	
+
 	/**
 	 * 获取序列下个值
 	 * @param name
@@ -64,21 +64,21 @@ public class SequenceTableService {
 	public synchronized Long getNextValue(String name) {
 		//查找已经存在的序列
 		SequenceTable seq = sequenceTableRepository.findOne(name);
-		
+
 		if(seq == null){
 			return null;
 		}
-		
-		Long currentValue = seq.getCurrentValue();
-		Long increment = seq.getIncrement();
-		
-		seq.setCurrentValue(currentValue+increment);
-		
+
+		Long currentValue = seq.getZyCurrentValue();
+		Long increment = seq.getZyIncrement();
+
+		seq.setZyCurrentValue(currentValue+increment);
+
 		SequenceTable seq2 = sequenceTableRepository.save(seq);
-		
-		return seq2.getCurrentValue();
+
+		return seq2.getZyCurrentValue();
 	}
-	
+
 	/**
 	 * 修改序列当前值
 	 * @param name
@@ -88,16 +88,16 @@ public class SequenceTableService {
 	public SequenceTable modifyCurrentValue(String name,Long currentValue) {
 		//查找已经存在的序列
 		SequenceTable seq = sequenceTableRepository.findOne(name);
-		
+
 		if(seq == null || currentValue == null){
 			return null;
 		}
-		
-		seq.setCurrentValue(currentValue);
-		
+
+		seq.setZyCurrentValue(currentValue);
+
 		return sequenceTableRepository.save(seq);
 	}
-	
+
 	/**
 	 * 修改序列增量值
 	 * @param name
@@ -107,14 +107,14 @@ public class SequenceTableService {
 	public SequenceTable modifyIncrement(String name,Long increment) {
 		//查找已经存在的序列
 		SequenceTable seq = sequenceTableRepository.findOne(name);
-		
+
 		if(seq == null || increment == null){
 			return null;
 		}
-		
-		seq.setIncrement(increment);
-		
+
+		seq.setZyIncrement(increment);
+
 		return sequenceTableRepository.save(seq);
 	}
-	
+
 }
