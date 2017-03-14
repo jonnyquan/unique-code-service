@@ -10,9 +10,9 @@ spring:
 #    username: root
 #    password: 3g2win.com
 #    initialize: true
-    url: jdbc:oracle:thin:@192.168.2.200:1521/orcl
+    url: jdbc:oracle:thin:@db.openec.zyhao.com:1521:orclsqyx
     username: uniquecodedb
-    password: 3g2win.com
+    password: sqyx123
     initialize: true
     validation-query: select * from dual
   jpa:
