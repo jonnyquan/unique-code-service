@@ -2,10 +2,6 @@ package com.zyhao.openec;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.feign.EnableFeignClients;
-import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.sleuth.sampler.AlwaysSampler;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
@@ -27,11 +23,11 @@ import org.springframework.stereotype.Component;
  */
 @SpringBootApplication
 @EnableJpaAuditing
-@EnableEurekaClient
-@EnableFeignClients
+//liusy  war EnableEurekaClient
+//liusy  war EnableFeignClients
 //@EnableResourceServer
 //@EnableOAuth2Client
-@EnableHystrix
+//EnableHystrix
 public class UniqueCodeApplication {
     public static void main(String[] args) {
         SpringApplication.run(UniqueCodeApplication.class, args);
