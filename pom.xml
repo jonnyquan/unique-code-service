@@ -5,7 +5,7 @@
 
     <artifactId>unique-code-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <!--<packaging>jar</packaging>-->
+    <packaging>jar</packaging>
     <name>openec/unique-code-service</name>
 
     <parent>
@@ -75,22 +75,22 @@
         </dependency>
 
         <!--打war包配置-start-->
-        <!-- <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-tomcat</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.tomcat</groupId>
-            <artifactId>tomcat-servlet-api</artifactId>
-            <version>8.5.12</version>
-            <scope>provided</scope>
-        </dependency> -->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-web</artifactId>-->
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.springframework.boot</groupId>-->
+                    <!--<artifactId>spring-boot-starter-tomcat</artifactId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.tomcat</groupId>-->
+            <!--<artifactId>tomcat-servlet-api</artifactId>-->
+            <!--<version>8.5.12</version>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
         <!--打war包配置-end-->
     </dependencies>
 

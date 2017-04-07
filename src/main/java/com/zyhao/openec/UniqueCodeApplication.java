@@ -23,11 +23,11 @@ import org.springframework.stereotype.Component;
  */
 @SpringBootApplication
 @EnableJpaAuditing
-//liusy  war EnableEurekaClient
-//liusy  war EnableFeignClients
+//@EnableEurekaClient
+//@EnableFeignClients
 //@EnableResourceServer
 //@EnableOAuth2Client
-//EnableHystrix
+//@EnableHystrix
 public class UniqueCodeApplication {
     public static void main(String[] args) {
         SpringApplication.run(UniqueCodeApplication.class, args);
