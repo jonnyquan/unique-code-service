@@ -6,7 +6,6 @@
     <artifactId>unique-code-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <!--<packaging>jar</packaging>-->
-    <packaging>war</packaging>
     <name>openec/unique-code-service</name>
 
     <parent>
@@ -76,7 +75,7 @@
         </dependency>
 
         <!--打war包配置-start-->
-        <dependency>
+        <!-- <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <exclusions>
@@ -91,7 +90,7 @@
             <artifactId>tomcat-servlet-api</artifactId>
             <version>8.5.12</version>
             <scope>provided</scope>
-        </dependency>
+        </dependency> -->
         <!--打war包配置-end-->
     </dependencies>
 
